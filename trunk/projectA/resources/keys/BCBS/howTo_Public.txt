@@ -1,0 +1,17 @@
+
+keytool -import -alias   idp   -file    idp.cer    -keystore    saml_response_encrypt_cert.jks
+
+
+Enter keystore password:  password
+Re-enter new password:   password
+Owner: CN=www.idp.com
+Issuer: CN=www.idp.com
+Serial number: 46d399d0
+Valid from: Tue Aug 28 09:43:12 BDT 2007 until: Fri Aug 25 09:43:12 BDT 2017
+Certificate fingerprints:
+         MD5:  5A:09:6C:41:C4:3B:4F:1C:1F:57:4F:1B:62:68:47:01
+         SHA1: 4E:38:7A:0C:0B:69:5D:B0:5F:5D:FD:70:D2:57:2B:B0:FE:BB:98:BA
+         Signature algorithm name: MD5withRSA
+         Version: 1
+Trust this certificate? [no]:  yes
+Certificate was added to keystore
