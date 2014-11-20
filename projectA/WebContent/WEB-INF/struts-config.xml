@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+ 
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "struts-config_1_2.dtd">
+        
+          
+         
+ 
+<struts-config>
+    <form-beans>
+        <form-bean name="LoginForm"
+            type="com.bcbs.sso.view.http.struts.form.LoginForm" />
+    </form-beans>
+ 
+ 
+    <global-exceptions>
+    <exception key="global.error.msg" type="java.lang.NullPointerException"
+      path="/error.jsp" />
+  	</global-exceptions>
+    
+    <global-forwards></global-forwards>
+ 
+    <action-mappings>
+        <action path="/login" name="LoginForm" validate="true" input="/index.jspx"
+            type="com.bcbs.sso.view.http.struts.action.PortalLoginSubmitAction">
+             <forward name="success" path="/welcome.jsp"    redirect="true"  />
+            <forward name="failure" path="/error.jsp"       redirect="true"   />
+        </action>
+		                
+    </action-mappings>
+ 
+     
+    <message-resources parameter="MessageResource"></message-resources>
+     
+</struts-config>
