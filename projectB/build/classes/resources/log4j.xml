@@ -15,7 +15,7 @@
        
     <appender name="SW_ROLLING_FILE"
         class="org.apache.log4j.RollingFileAppender">
-        <param name="File" value="D:\\sw.log" />
+        <param name="File" value="D:\\swB.log" />
         <param name="Append" value="true" />
         <param name="MaxFileSize" value="500KB" />
         <param name="MaxBackupIndex" value="5" />
@@ -24,7 +24,7 @@
                 value="[%d{ISO8601}] %-5p %m%n" />
         </layout>
     </appender>
-     <logger name="com.frequencymarketing" additivity="false">
+     <logger name="com.bcbs" additivity="false">
         <level value="DEBUG" />
         <appender-ref ref="SW_ROLLING_FILE" />
         <appender-ref ref="STDOUT" />

@@ -27,6 +27,11 @@
              <forward name="success" path="/welcome.jsp"    redirect="true"  />
             <forward name="failure" path="/error.jsp"       redirect="true"   />
         </action>
+        <action path="/sso" input="/sso.jspx"
+            type="com.bcbs.sso.view.http.struts.action.PortalSSOSubmitAction">
+             <forward name="success" path="/custom.jsp"    redirect="true"  />
+            <forward name="failure" path="/error.jsp"       redirect="true"   />
+        </action>
 		                
     </action-mappings>
  

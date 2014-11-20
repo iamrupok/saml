@@ -33,9 +33,12 @@ public class LoginSeamlessSaml2Action extends Action {
 
 		try {
 			
-			String userid = request.getParameter("MySecret");
-			String secret = request.getParameter("MyUser");
-
+			String secretKey = request.getParameter("MySecret");
+			String userID = request.getParameter("MyUser");
+			
+			request.getSession().setAttribute("MySecret",secretKey);
+			request.getSession().setAttribute("MyUser",userID);
+			
 			forward  = FORWARD_SUCCESS;	
 			
 		} catch (Exception e) {

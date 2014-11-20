@@ -8,7 +8,6 @@
     </head>
     <body>
     <h1>Portal Login</h1>
-    <h3>User ID:  admin   ,   Shared Key:  admin123</h3>
-    
+    <h3>User ID:  <%=(String)request.getSession().getAttribute("MyUser")%>   ,   Shared Key:  <%=(String)request.getSession().getAttribute("MySecret")%></h3>
     </body>
 </html>
